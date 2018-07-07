@@ -1,0 +1,23 @@
+title: AWX 1138
+email: anawagner1138@gmail.com
+description: >-
+  Personal Profile/Portfolio for Ana Wagner
+  Software Engineer in Wichita, KS.
+baseurl: ""
+url: ""
+twitter_username: anawagner1138
+github_username: anawagner
+
+permalink: /:year/:month/:day/:title:output_ext
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "posts"

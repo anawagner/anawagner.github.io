@@ -1,0 +1,10 @@
+<div class="related">
+  <h3>Related Posts:</h3>
+  <ul>
+      {% for post in site.categories[page.category] limit:3 %}
+        <li><i class="fa fa-caret-right" aria-hidden="true"></i>
+          <a href="{{ post.url | absolute_url }}">
+              {{ post.title }} </a></li>
+      {% endfor %}
+  </ul>
+</div>
