@@ -174,11 +174,11 @@ So the "(if people..." statement should be changed to "(if (not (null? people)) 
 
 Here is a class diagram of the classes in the given code:
 
-![class diagram](assets/images/OOAdventure_objects.png)
+![class diagram](/assets/images/OOAdventure_objects.png)
 
 Here is a diagram of the rooms and exits:
 
-![rooms](assets/images/OOAdventure_rooms.png)
+![rooms](/assets/images/OOAdventure_rooms.png)
 
 During setup the following characters are created in a randomly chosen
 room:

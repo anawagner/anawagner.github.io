@@ -1,8 +1,22 @@
----
-layout: default
----
-{{ content }}
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+<body>
+  {% include header.html %}
 
-{% include category.html %}
+<div class="container">
 
-<h3><a href="/blog">Back to Blog Index</a></h3>
+  <div class="content">
+    <h2>{{ page.title }}</h2>
+    {{ content }}
+
+    {% include category.html %}
+
+    <h3><a href="/blog">Back to Blog Index</a></h3>
+  </div>
+
+</div>
+  {% include footer.html %}
+  {% include analytics.html %}
+</body>
+</html>
