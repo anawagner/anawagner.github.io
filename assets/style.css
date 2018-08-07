@@ -127,6 +127,13 @@ header ul {
   padding: 10px;
 }
 
+.post {
+  background-color: #dfd8c8;
+  width: 90%;
+  float: left;
+  padding: 10px;
+}
+
 .content {
   background-color: #dfd8c8;
   width: 70%;
