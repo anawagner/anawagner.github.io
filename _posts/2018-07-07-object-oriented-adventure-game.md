@@ -76,20 +76,20 @@ method in the container class.  The "add-thing" method uses the "have-thing?"
 method. Checking the "have-thing?" method on the place returned true even though
 the "things" list was empty.
 
-```
+<pre><code class="scheme">
 'HAVE-THING? (lambda (thing)
                 (not (null? (memq thing things))))
-```
+</code></pre>
 
 The way this is implemented it expects memq to return an empt list, or null,
 when the expected item is not found. However, in [mit scheme 9.2](https://www.gnu.org/software/mit-scheme/documentation/mit-scheme-ref/Searching-Lists.html) memq returns #f when the item is not found, and (null? #f) returns #f, where we
 expect #t. So I changed "HAVE-THING?" like this:
-```
+<pre><code class="scheme">
 'HAVE-THING? (lambda (thing)
 		            (if (memq thing things)
 			              #t
 			              #f))
-```
+</code></pre>
 
 Now I was able to complete set up and play the game. After some gameplay
 I started getting the same kind of error again. "I don't know how to make a
@@ -132,7 +132,7 @@ eat.
 So again, a change in implementation ([#f and '() are no longer treated as the same value](https://groups.csail.mit.edu/mac/ftpdir/scheme-7.4/doc-html/scheme_2.html#SEC12))
 caused this error.
 
-```
+<pre><code class="scheme">
 'EAT-PEOPLE
 (lambda ()
   (if (= (random hunger) 0)
@@ -147,12 +147,12 @@ caused this error.
             (ask self 'EMIT
               (list (ask self 'NAME) "'s belly rumbles"))))
       'not-hungry-now))
-```
+</code></pre>
 
 When there are no people around, the value of people is the empty list '()
 So the "(if people..." statement should be changed to "(if (not (null? people)) ...)"
 
-```
+<pre><code class="scheme">
 'EAT-PEOPLE
 (lambda ()
   (if (= (random hunger) 0)
@@ -167,7 +167,7 @@ So the "(if people..." statement should be changed to "(if (not (null? people)) 
             (ask self 'EMIT
               (list (ask self 'NAME) "'s belly rumbles"))))
       'not-hungry-now))
-```
+</code></pre>
 
 
 ----
@@ -182,14 +182,14 @@ Here is a diagram of the rooms and exits:
 
 During setup the following characters are created in a randomly chosen
 room:
-  Students:
-    ben-bitdiddle
-    alyssa-hacker
-    course-6-frosh
-    lambda-man
-  Hall Monitors:
-    dr-evil
-    mr-bigglesworth
-  Trolls:
-    grendel
-    registrar
+  - Students:
+    - ben-bitdiddle
+    - alyssa-hacker
+    - course-6-frosh
+    - lambda-man
+  - Hall Monitors:
+    - dr-evil
+    - mr-bigglesworth
+  - Trolls:
+    - grendel
+    - registrar
