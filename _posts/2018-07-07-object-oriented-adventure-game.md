@@ -1,10 +1,9 @@
 ---
 type: posts
-title: Object Oriented Adventure Game, part 1
+title: Object Oriented Adventure Game
 category: code
 ---
-
-Project: Object Oriented Adventure Game from free online course:
+Project: [Object Oriented Adventure Game](https://github.com/anawagner/SICP/tree/master/oo_adventure_game) from free online course:
 [MIT 6.001 Structure and Interpretation of Computer Programs](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/projects/)
 
 I have been reading _Structure and Interpretation of Computer Programs_ and
@@ -193,3 +192,7 @@ room:
   - Trolls:
     - grendel
     - registrar
+
+The assignment gives 11 exercises that extend the code, I have completed all of
+those exercises except for the last one, which I leave for a later time.
+The results can be seen [here](https://github.com/anawagner/SICP/tree/master/oo_adventure_game)
