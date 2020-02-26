@@ -1,0 +1,166 @@
+/* General setup */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header, section, aside, nav, footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+
+/*
+font-family: 'Nanum Myeongjo', serif;
+font-family: 'Arsenal', sans-serif;
+WRITE YOUR CODE BELOW HERE */
+html {
+  font-size: 10px;
+}
+
+body{
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+header h1 {
+  text-align: center;
+}
+
+h1, h2 {
+  font-family: 'Arsenal', sans-serif;
+  letter-spacing: 4px;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h2 + p {
+  text-indent: 20px;
+}
+
+/* LINKS */
+a {
+  outline: none;
+}
+a:link {
+  color: #8c4e4e;
+}
+a:visited {
+  color: #915051;
+}
+a:focus {
+  color: #8c4e4e;
+  background-color: #c29292;
+  text-decoration: none;
+}
+a:hover {
+  color: #8c4e4e;
+  background-color: #559999;
+  text-decoration: none;
+}
+a:active {
+  color: #24e3ec;
+  background-color: #aa6666;
+}
+
+a[href*="http"] {
+  background: url('external-link-52.png') no-repeat 100% 0;
+  opacity: 0.7;
+  background-size: 16px 16px;
+  padding-right: 19px;
+}
+a[href*="http"]:focus {
+  background-color: #c29292;
+}
+a[href*="http"]:hover {
+  background-color: #559999;
+}
+a[href*="http"]:active {
+  background-color: #aa6666;
+}
+
+/* LISTS */
+
+ul {
+  list-style-type: none;
+}
+ul li {
+}
+ul li::before {
+  font-family: fontawesome;
+  content: "\f105";
+  color: #aa6666;
+  padding-right: 10px;
+  margin-left: -20px;
+}
+
+/* NAVIGATION MENU */
+nav ul {
+  padding: 0px;
+  margin: 0px;
+}
+nav ul li::before{
+  content: none;
+}
+nav a {
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid #aa6666;
+  padding: 10px;
+  margin: 5px;
+  width: 100%;
+  text-align: center;
+  line-height: 2.5em;
+}
+nav a:link a:visited a:focus {
+  color: #8c4e4e;
+  background-color: #c29292;
+}
+nav a:hover {
+  color: #8c4e4e;
+  background-color: #559999;
+  text-decoration: none;
+}
+nav a:active {
+  color: #24e3ec;
+  background-color: #aa6666;
+}

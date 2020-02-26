@@ -1,0 +1,22 @@
+html {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+/* Your CSS below here */
+p {
+  width: 200px;
+  height: 3em;
+  border: 1px solid rgb(0,112,112);
+  border-radius: 10px;
+  background-image: linear-gradient(to right bottom, transparent 30%, rgba(0,0,0,.2));
+  background-color: teal;
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.1rem;
+  color: teal;
+  text-shadow: 1px 1px 1px black;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.7),
+              inset 2px 3px 5px rgba(255,255,255,0.5),
+              inset -2px -3px 5px rgba(0,0,0,0.3);
+}
