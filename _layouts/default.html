@@ -2,18 +2,19 @@
 <html lang="en">
   {% include head.html %}
 <body>
-  {% include header.html %}
-
-<div class="container">
-  {% include profile.html %}
 
   <div class="content">
-    <h2>{{ page.title }}</h2>
-    {{ content }}
+    {% include header.html %}
+
+    <main>
+      {% include aboutme.html %}
+      {% include portfolio.html %}
+      {% include updates.html %}
+    </main>
   </div>
 
-</div>
   {% include footer.html %}
+  
   {% include analytics.html %}
 </body>
 </html>
