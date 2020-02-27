@@ -11,6 +11,10 @@ body {
   grid-template-rows: 1fr auto;
 }
 
+h1, h2 {
+  color: #269ccc;
+}
+
 a {
   color: #9ed2c5;
 }
@@ -43,9 +47,7 @@ nav a {
 nav a:hover {
   background-color: #9ed2c5;
 }
-nav a:active {
-  color: green;
-}
+
 /* NAVIGATION for wider screens */
 @media screen and (min-width: 600px) {
   nav {
@@ -62,45 +64,33 @@ nav a:active {
   }
 }
 
-h1, h2 {
-  color: #269ccc;
-}
-
-h1 {
-  padding-left: 20px;
-}
-
+/* PROFILE section */
 .profile {
   padding: 20px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-gap: 20px;
-  grid-template-areas: "title title"
-                       "photo article";
+}
+
+.profile h1 {
+  margin: 0;
 }
 
 .profile .title {
-  grid-area: title;
   color: #9ed2c5;
   font-size: 1.3em;
   font-weight: bold;
 }
 
-.profile .photo {
-  grid-area: photo;
-  align-items: center;
-  text-align: center;
-}
-
 .profile img {
   filter: grayscale(80%);
   border-radius: 50%;
-  margin: 20px 0 20px 0;
-  grid-area: photo;
+  margin: 20px;
+  width: 150px;
+  height: 177px;
+  float: left;
+  shape-outside: circle();
 }
 
 .profile article {
-  grid-area: article;
+  padding-top: 20px;
 }
 
 .profile ul {
@@ -128,10 +118,15 @@ h1 {
   color: green;
 }
 
+/* PORTFOLIO SECTION */
+.portfolio {
+  padding: 0 20px 0 20px;
+}
+
 .cards {
   list-style: none;
   margin: 0;
-  padding: 0 20px 0 20px;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
@@ -156,7 +151,8 @@ h1 {
   padding: 0.5em 1em;
 }
 
-.sidebar {
+/* UPDATES section */
+.updates {
   padding: 0 10px 10px 0;
   margin-left: 20px;
 }
@@ -172,30 +168,7 @@ h1 {
   padding-left: 15px;
 }
 
-@media screen and (min-width: 800px) {
-  main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr minmax(260px, 1fr);
-    grid-auto-rows: max-content auto;
-    grid-gap: 5px;
-  }
-  .aboutme {
-    grid-column: 1/4;
-    grid-row: 1;
-  }
-  .sidebar {
-    grid-column: 4;
-    grid-row: 1/3;
-  }
-  .portfolio {
-    grid-column: 1/4;
-    grid-row: 2;
-  }
-}
-
-.post {
-  padding: 20px;
-}
+/* FOOTER */
 .footer {
   grid-row-start: 2;
   grid-row-end: 3;
@@ -210,4 +183,32 @@ h1 {
   line-height: 2em;
   font-size: 0.8em;
   color: white;
+}
+
+/* GRID LAYOUT FOR LARGER SCREENS */
+@media screen and (min-width: 800px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr minmax(260px, 1fr);
+    grid-auto-rows: max-content auto;
+    grid-gap: 5px;
+  }
+  .profile {
+    grid-column: 1/4;
+    grid-row: 1;
+  }
+  .sidebar {
+    grid-column: 4;
+    grid-row: 1/3;
+  }
+  .portfolio {
+    grid-column: 1/4;
+    grid-row: 2;
+  }
+}
+
+
+/* FOR POSTS PAGES */
+.post {
+  padding: 20px;
 }
