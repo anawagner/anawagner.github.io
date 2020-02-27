@@ -82,11 +82,11 @@ nav a:hover {
 .profile img {
   filter: grayscale(80%);
   border-radius: 50%;
-  margin: 20px;
   width: 150px;
   height: 177px;
   float: left;
-  shape-outside: circle();
+  shape-outside: ellipse();
+  padding: 10px;
 }
 
 .profile article {
