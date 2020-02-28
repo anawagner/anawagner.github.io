@@ -83,14 +83,9 @@ nav a:hover {
   filter: grayscale(80%);
   border-radius: 50%;
   width: 150px;
-  height: 177px;
   float: left;
   shape-outside: ellipse();
-  padding: 10px;
-}
-
-.profile article {
-  padding-top: 20px;
+  margin: 10px;
 }
 
 .profile ul {
