@@ -1,0 +1,39 @@
+body {
+  background-color: #e4e7ed;
+  font-size: 1.1em;
+}
+
+.container {
+  width: 800px;
+  margin-left: 100px;
+}
+.footer {
+  height: 3em;
+  padding: 20px;
+}
+
+.intro {
+  color: white;
+  min-height: 100px;
+  padding: 10px 10px 20px 10px;
+  text-shadow: 2px 2px 2px #000000;
+}
+
+#top {
+  float: left;
+  shape-outside: url(images/nicholas01nobgcropped.png);
+  shape-image-threshold: 0.5;
+  shape-margin: 20px;
+}
+
+#bottom {
+  float: right;
+  shape-outside: url(images/nicholas02nobg-cropped.png);
+  shape-image-threshold: 0.5;
+  shape-margin: 10px;
+  max-height: 600px;
+}
+
+.first, .second {
+  font-family: 'Cagliostro', sans-serif;
+}
